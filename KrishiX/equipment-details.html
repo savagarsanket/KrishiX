@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Equipment Details - KrishiX</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* PAGE */
+
+.details-container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* IMAGE */
+
+.equipment-img img{
+width:100%;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* INFO */
+
+.equipment-info h2{
+color:#0F3D2E;
+margin-bottom:10px;
+}
+
+.price{
+font-size:24px;
+color:#D4AF37;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.location{
+color:#666;
+margin-bottom:15px;
+}
+
+.status{
+background:#eaf6ea;
+color:#1b7a1b;
+padding:6px 12px;
+border-radius:6px;
+display:inline-block;
+margin-bottom:20px;
+}
+
+/* DESCRIPTION */
+
+.description{
+margin-top:20px;
+line-height:1.6;
+}
+
+/* BUTTONS */
+
+.action-buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.book-btn{
+background:#0F3D2E;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.book-btn:hover{
+background:#145c45;
+}
+
+.call-btn{
+background:#D4AF37;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* SPECS */
+
+.specs{
+margin-top:30px;
+}
+
+.specs li{
+margin-bottom:6px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.details-container{
+grid-template-columns:1fr;
+}
+
+}
+
+</script>
+12:43 am
+/* Equipment Details Page */
+
+.container{
+max-width:900px;
+margin:40px auto;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+
+#img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+/* Title */
+
+#title{
+color:#0F3D2E;
+margin-bottom:5px;
+font-size:28px;
+}
+
+/* Price */
+
+#price{
+color:#D4AF37;
+font-size:20px;
+font-weight:bold;
+margin-bottom:5px;
+}
+
+/* Location */
+
+#location{
+color:#555;
+margin-bottom:10px;
+}
+
+/* Description */
+
+#desc{
+line-height:1.6;
+margin-bottom:15px;
+}
+
+/* Buttons */
+
+button{
+background:#0F3D2E;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#145c45;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">KrishiX</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="equipment.html">Equipment</a>
+<a href="profile.html">Profile</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<div class="container">
+
+<div class="container">
+
+<img id="img">
+
+<h2 id="title"></h2>
+
+<p id="price"></p>
+
+<p id="location"></p>
+
+<p id="desc"></p>
+
+<button>Request Booking</button>
+
+</div>
+
+<a href="tel:+919876543210">
+<button class="call-btn">
+Call Owner
+</button>
+</a>
+
+<a href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20rent%20your%20tractor"
+target="_blank">
+
+<button class="whatsapp-btn">
+WhatsApp Owner
+</button>
+
+</a>
+
+</div>
+
+
+<!-- SPECS -->
+
+<div class="specs">
+
+<h3>Specifications</h3>
+
+<ul>
+
+<li>Engine Power: 45 HP</li>
+<li>Fuel Type: Diesel</li>
+<li>Condition: Excellent</li>
+<li>Owner Experience: 5+ years</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+© 2026 KrishiX - Smart Agriculture Rental Platform
+
+</footer>
+
+<script>
+
+const data = {
+
+1:{
+name:"Tractor",
+price:"₹1500 / day",
+location:"Vadodara",
+image:"https://images.unsplash.com/photo-1598514982836-1c9f5bff1f3f",
+desc:"Powerful tractor for farming work"
+},
+
+2:{
+name:"Sprayer",
+price:"₹300 / day",
+location:"Anand",
+image:"https://images.unsplash.com/photo-1605000797499-95a51c5269ae",
+desc:"Crop spraying machine"
+},
+
+3:{
+name:"Rotavator",
+price:"₹900 / day",
+location:"Ahmedabad",
+image:"https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+desc:"High performance rotavator"
+}
+
+}
+
+/* get id */
+
+const params = new URLSearchParams(window.location.search)
+const id = params.get("id")
+
+const equipment = data[id]
+
+document.getElementById("title").innerText = equipment.name
+document.getElementById("price").innerText = equipment.price
+document.getElementById("location").innerText = equipment.location
+document.getElementById("desc").innerText = equipment.desc
+document.getElementById("img").src = equipment.image
+
+</script>
+
+</body>
+</html>
