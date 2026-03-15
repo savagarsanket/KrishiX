@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KrishiX Account</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* PAGE BACKGROUND */
+
+.profile-page{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:85vh;
+padding:20px;
+background:linear-gradient(180deg,#eef3ef,#f4f4f4);
+}
+
+/* CARD */
+
+.account-card{
+background:white;
+padding:40px;
+border-radius:14px;
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+width:100%;
+max-width:420px;
+text-align:center;
+}
+
+/* TITLE */
+
+.account-card h2{
+color:#0F3D2E;
+margin-bottom:10px;
+font-size:28px;
+}
+
+.account-card p{
+color:#666;
+margin-bottom:25px;
+}
+
+/* ROLE CONTAINER */
+
+.role-container{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+/* BUTTONS */
+
+.role-btn{
+padding:14px;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.farmer-btn{
+background:#0F3D2E;
+color:white;
+}
+
+.owner-btn{
+background:#D4AF37;
+}
+
+.role-btn:hover{
+transform:scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* SMALL TEXT */
+
+.small-text{
+margin-top:20px;
+font-size:14px;
+color:#666;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+nav a{
+margin:8px;
+}
+
+.account-card{
+padding:30px 20px;
+}
+
+.account-card h2{
+font-size:24px;
+}
+
+.role-btn{
+font-size:15px;
+padding:12px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body onclick="checkLogin()">
+
+<header>
+
+<div class="logo">KrishiX</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="equipment.html">Equipment</a>
+<a href="profile.html">Profile</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="profile-page">
+
+<div class="account-card">
+
+<h2>Welcome to KrishiX</h2>
+
+<p>Select your account type to continue</p>
+
+<div class="role-container">
+
+<button class="role-btn farmer-btn" onclick="farmerLogin()">
+👨‍🌾 Continue as Farmer
+</button>
+
+<button class="role-btn owner-btn" onclick="ownerLogin()">
+🚜 Continue as Equipment Owner
+</button>
+
+</div>
+
+<p class="small-text">
+Manage bookings, equipment, and profile from your dashboard.
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+© 2026 KrishiX - Smart Agriculture Rental Platform
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Farmer Dashboard</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+
+.dashboard{
+display:flex;
+min-height:90vh;
+}
+
+.sidebar{
+width:220px;
+background:#0F3D2E;
+color:white;
+padding:20px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+padding:10px;
+margin-bottom:10px;
+border-radius:5px;
+}
+
+.sidebar a:hover{
+background:#145c45;
+}
+
+.main{
+flex:1;
+padding:40px;
+background:#f4f4f4;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+margin-bottom:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">KrishiX</div>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="../equipment.html">Equipment</a>
+<a href="../profile.html">Profile</a>
+<a href="../contact.html">Contact</a>
+</nav>
+
+</header>
+
+<div class="dashboard">
+
+<div class="sidebar">
+
+<h3>Farmer Panel</h3>
+
+<a href="#">My Bookings</a>
+<a href="#">Booking History</a>
+<a href="#">Saved Equipment</a>
+<a href="#">Profile Settings</a>
+<a href="#">Notifications</a>
+<a href="../profile.html" onclick="logoutUser()">Logout</a>
+
+</div>
+
+<div class="main">
+
+<div class="card">
+<h3>My Bookings</h3>
+<p>No bookings yet.</p>
+</div>
+
+<div class="card">
+<h3>Saved Equipment</h3>
+<p>No saved equipment.</p>
+</div>
+
+</div>
+
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Owner Dashboard</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+
+.dashboard{
+display:flex;
+min-height:90vh;
+}
+
+.sidebar{
+width:220px;
+background:#0F3D2E;
+color:white;
+padding:20px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+padding:10px;
+margin-bottom:10px;
+border-radius:5px;
+}
+
+.sidebar a:hover{
+background:#145c45;
+}
+
+.main{
+flex:1;
+padding:40px;
+background:#f4f4f4;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+margin-bottom:20px;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+margin-top:10px;
+background:#D4AF37;
+border:none;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#caa52f;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">KrishiX</div>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="../equipment.html">Equipment</a>
+<a href="../profile.html">Profile</a>
+<a href="../contact.html">Contact</a>
+</nav>
+
+</header>
+
+<div class="dashboard">
+
+<div class="sidebar">
+
+<h3>Owner Panel</h3>
+
+<a href="#">Add Equipment</a>
+<a href="#">My Equipment</a>
+<a href="#">Rental Orders</a>
+<a href="#">Earnings</a>
+<a href="#">Profile Settings</a>
+<a href="#" onclick="logoutUser()">Logout</a>
+
+</div>
+
+<div class="main">
+
+<div class="card">
+
+<h3>Add Equipment</h3>
+
+<input type="text" placeholder="Equipment Name">
+
+<input type="number" placeholder="Price per day">
+
+<input type="text" placeholder="Location">
+
+<textarea placeholder="Description"></textarea>
+
+<button>Add Equipment</button>
+
+</div>
+
+<div class="card">
+
+<h3>My Equipment</h3>
+
+<p>No equipment added yet.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
