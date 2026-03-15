@@ -95,13 +95,13 @@ location.reload()
 
 function farmerLogin(){
 
-window.location.href="dashboards/farmer.html"
+window.location.href="farmer.html"
 
 }
 
 function ownerLogin(){
 
-window.location.href="dashboards/owner.html"
+window.location.href="owner.html"
 
 }
 
@@ -112,12 +112,12 @@ window.location.href="dashboards/owner.html"
 
 function farmerLogin(){
 localStorage.setItem("krishix_role","farmer")
-window.location.href="dashboards/farmer.html"
+window.location.href="farmer.html"
 }
 
 function ownerLogin(){
 localStorage.setItem("krishix_role","owner")
-window.location.href="dashboards/owner.html"
+window.location.href="owner.html"
 }
 
 /* ===== Auto redirect if already logged ===== */
@@ -127,11 +127,11 @@ function checkLogin(){
 const role = localStorage.getItem("krishix_role")
 
 if(role === "farmer"){
-window.location.href="dashboards/farmer.html"
+window.location.href="farmer.html"
 }
 
 if(role === "owner"){
-window.location.href="dashboards/owner.html"
+window.location.href="owner.html"
 }
 
 }
